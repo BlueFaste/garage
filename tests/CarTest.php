@@ -36,12 +36,21 @@ class CarTest extends TestCase
 	}
 
 	/** @test */
-public function can_have_car_wear()
-{
-	$peugeot = new Brand('Peugeot');
-	$peugeot205 = new Citadine('205', $peugeot, 15000, 2, 2020);
+	public function car_have_bad_popularity()
+	{
+		$peugeot = new Brand('Peugeot');
+		$peugeot205 = new Citadine('205', $peugeot, 15000, 2, 2005);
 
-	$this->assertEquals(4040, $peugeot205->getWear());
-}
+		$this->assertEquals('Popularité mauvaise', $peugeot205->showPopularity());
+	}
+
+	/** @test */
+	public function can_have_car_wear()
+	{
+		$peugeot = new Brand('Peugeot');
+		$peugeot205 = new Citadine('205', $peugeot, 15000, 2, 2020);
+
+		$this->assertEquals(4040, $peugeot205->getWear());
+	}
 
 }
