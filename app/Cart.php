@@ -8,7 +8,7 @@ use PHPUnit\Util\Exception;
 
 class Cart
 {
-	public array $articles;
+	protected array $articles;
 
 	public function __construct(array $articles)
 	{
@@ -23,11 +23,11 @@ class Cart
 	public function getInvoice(): array
 	{
 		$totalPrice = 0;
-		$totalArticles= '';
+		$totalArticles= [];
 		foreach ($this->articles as $article){
 			$totalPrice += $article->getPrice();
-			$totalArticles = $totalArticles.', '.$article->getName();
+			array_push($totalArticles, $article->getName());
 		}
-		return [$totalArticles, $totalPrice];
+		return [implode(', ',$totalArticles), $totalPrice];
 	}
 }
