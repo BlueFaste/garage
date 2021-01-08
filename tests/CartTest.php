@@ -25,7 +25,14 @@ class CartTest extends TestCase
 		$panier = new Cart($listeAchat);
 
 		$this->assertEquals(['Peugeot 205, Renaud utilitaire, Sapin déo', 2128.7128712871286], $panier->getInvoice());
+	}
 
+	/** @test */
+	public function can_have_invoice_exception()
+	{
+		$this->expectExceptionMessage('Vous ne pouvez mettre dans le panier que des objets du garage.');
+		$listeAchat = [1];
+		$panier = new Cart($listeAchat);
 
 	}
 
