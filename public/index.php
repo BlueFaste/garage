@@ -2,14 +2,14 @@
 
 namespace App;
 
-require __DIR__.'/../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 $peugeot = new Brand('Peugeot');
-$peugeot205 = new Citadine('205', $peugeot, 15000, 2,2020);
+$peugeot205 = new Citadine('205', $peugeot, 15000, 2, 2020);
 
 $renaud = new Brand('Renaud');
-$utility = new UtilityVehicle('utilitaire', $renaud, 2000, 12,2000);
+$utility = new UtilityVehicle('utilitaire', $renaud, 2000, 12, 2000);
 
-$fir= new DeodorantFir('Sapin déo');
+$fir = new DeodorantFir('Sapin déo');
 
 var_dump($peugeot205->getWear());
 //var_dump($utility->getName());

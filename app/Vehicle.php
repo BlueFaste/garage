@@ -17,6 +17,6 @@ abstract class Vehicle
 		$this->price = $price;
 	}
 
-	abstract public function showPopularity(): String;
+	abstract public function showPopularity(): string;
 
 }

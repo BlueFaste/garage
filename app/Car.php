@@ -21,7 +21,7 @@ class Car extends Vehicle implements Article
 
 	public function showPopularity(): string
 	{
-		if ($this->yearConstruction > 2010){
+		if ($this->yearConstruction > 2010) {
 			return 'Popularité bonne';
 		} else {
 			return 'Popularité mauvaise';
@@ -35,7 +35,7 @@ class Car extends Vehicle implements Article
 
 	public function getName(): string
 	{
-		return $this->brand->name.' '.$this->name;
+		return $this->brand->name . ' ' . $this->name;
 	}
 
 }
