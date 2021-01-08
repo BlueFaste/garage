@@ -85,7 +85,7 @@ Il est lié au contrat Article.
 Il a donc la capacité de donner son prix qui vaut son prix plus son volume multiplié par 10.  
 Il a aussi la capacité de donner sa dénomination qui vaut celui de sa Marque suivi du sien.  
 
-> Un Sapin désodorisant est défini par son nom.
+> Un Sapin désodorisant est défini par son nom.  
 Il est lié au contrat Article.  
 Il a donc la capacité de donner son prix qui vaut 5 €.  
 Il a aussi la capacité de donner sa dénomination qui vaut son nom.
