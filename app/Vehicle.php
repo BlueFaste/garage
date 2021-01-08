@@ -4,6 +4,8 @@
 namespace App;
 
 
+use PHPUnit\Util\Exception;
+
 abstract class Vehicle
 {
 	protected string $name;
@@ -15,6 +17,10 @@ abstract class Vehicle
 		$this->name = $name;
 		$this->brand = $brand;
 		$this->price = $price;
+
+		if (!$brand instanceof Brand) {
+			throw new Exception("La marque du véhicule ne peut être qu'un objet Brand");
+		}
 	}
 
 	abstract public function showPopularity(): string;
